@@ -23,7 +23,6 @@ class ETMailer {
     private $messageSubject;
     private $messageSubjectField;
 
-
     private $emailTemplates = array('HTMLBody'=>'','TextBody'=>'');
 
     /**
@@ -118,6 +117,16 @@ class ETMailer {
     public function setETEmailID($emailID)
     {
         $this->ETEmailID = $emailID;
+    }
+
+    /**
+     * Change the replacement text tag to a custom value
+     *
+     * @param string $replacementTag
+     */
+    public function setMessageBodyField($replacementTag)
+    {
+        $this->messageBodyField = $replacementTag;
     }
 
     /**
